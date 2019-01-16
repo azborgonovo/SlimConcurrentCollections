@@ -6,11 +6,13 @@ using System.Threading;
 namespace SlimConcurrentCollections
 {
     /// <summary>
-    /// Provides a thread-safe base class for a generic collection that can be accessed by multiple threads concurrently.
+    /// Provides a base class for a generic thread-safe collection that can be accessed by multiple threads concurrently.
     /// </summary>
     /// <remarks>To guarantee thread safety during enumeration, the collection is locked during the entire enumeration.</remarks>
     /// <typeparam name="T">The type of elements in the collection.</typeparam>
-    public class ConcurrentCollection<T> : ICollection<T>
+    // [System.Runtime.InteropServices.ComVisible(false)]
+    // [System.Serializable]
+    public class ConcurrentCollection<T> : ICollection<T> //, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, IList
     {
         private readonly ICollection<T> _collection = new Collection<T>();
         private readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();
