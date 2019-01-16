@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Authors>Andre Borgonovo</Authors>
+    <RepositoryUrl>https://github.com/azborgonovo/SlimConcurrentCollections</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/azborgonovo/SlimConcurrentCollections/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+</Project>
