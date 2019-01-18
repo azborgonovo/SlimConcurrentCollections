@@ -8,6 +8,15 @@
     <PackageProjectUrl />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>Provides thread-safe collection classes that implement the (missing) System.Collections.Generic interfaces.
+
+Available Types:
+
+SlimConcurrentCollections.ConcurrentCollection&lt;T&gt;
+
+SlimConcurrentCollections.ConcurrentList&lt;T&gt;</Description>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>1.0.0-alpha</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

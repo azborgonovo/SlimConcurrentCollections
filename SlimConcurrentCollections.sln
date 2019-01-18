@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlimConcurrentCollections", "src\SlimConcurrentCollections\SlimConcurrentCollections.csproj", "{B18EDD80-3FCA-4FE6-9BA3-562DAF61F636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlimConcurrentCollections.Tests", "test\SlimConcurrentCollections.Tests\SlimConcurrentCollections.Tests.csproj", "{0D3E4D66-B165-486E-AA5B-563000B23714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlimConcurrentCollections.Tests", "test\SlimConcurrentCollections.Tests\SlimConcurrentCollections.Tests.csproj", "{0D3E4D66-B165-486E-AA5B-563000B23714}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E82D5E7B-6EBA-44C7-B656-53B39C227544}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

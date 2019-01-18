@@ -4,6 +4,7 @@
 ## Contents
 
 - [ConcurrentCollection\`1](#T-SlimConcurrentCollections-ConcurrentCollection`1 'SlimConcurrentCollections.ConcurrentCollection`1')
+  - [Dispose()](#M-SlimConcurrentCollections-ConcurrentCollection`1-Dispose 'SlimConcurrentCollections.ConcurrentCollection`1.Dispose')
 - [ConcurrentList\`1](#T-SlimConcurrentCollections-ConcurrentList`1 'SlimConcurrentCollections.ConcurrentList`1')
 
 <a name='T-SlimConcurrentCollections-ConcurrentCollection`1'></a>
@@ -26,6 +27,17 @@ Provides a base class for a generic thread-safe collection that can be accessed 
 ##### Remarks
 
 To guarantee thread safety during enumeration, the collection is locked during the entire enumeration.
+
+<a name='M-SlimConcurrentCollections-ConcurrentCollection`1-Dispose'></a>
+### Dispose() `method`
+
+##### Summary
+
+
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-SlimConcurrentCollections-ConcurrentList`1'></a>
 ## ConcurrentList\`1 `type`

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 
 namespace SlimConcurrentCollections
@@ -12,18 +14,19 @@ namespace SlimConcurrentCollections
     /// <typeparam name="T">The type of elements in the collection.</typeparam>
     // [System.Runtime.InteropServices.ComVisible(false)]
     // [System.Serializable]
-    public class ConcurrentCollection<T> : ICollection<T> //, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, IList
+    public class ConcurrentCollection<T> : ICollection<T>, IDisposable //, IEnumerable<T>, IList<T>, IReadOnlyCollection<T>, IReadOnlyList<T>, IList
     {
         private readonly ICollection<T> _collection = new Collection<T>();
         private readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();
-
-        // public ReaderWriterLockSlim Lock => _lock;
 
         #region ICollection<T> implementation
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new ConcurrentEnumerator<T>(_collection.GetEnumerator(), _lock);
+            // https://stackoverflow.com/questions/24820270/is-enumerator-thread-safe-after-getting-with-lock
+            _lock.EnterReadLock();
+            var collectionSnapshot = _collection.ToList();
+            return new ConcurrentEnumerator<T>(collectionSnapshot.GetEnumerator(), _lock);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -96,9 +99,41 @@ namespace SlimConcurrentCollections
             }
         }
 
-        public int Count => _collection.Count;
+        public int Count
+        {
+            get
+            {
+                try
+                {
+                    _lock.EnterReadLock();
+                    return _collection.Count;
+                }
+                finally
+                {
+                    _lock.ExitReadLock();
+                }
+            }
+        }
 
         public bool IsReadOnly => _collection.IsReadOnly;
+
+        #endregion
+
+        #region IDisposable implementation
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Dispose()
+        {
+            try
+            {
+                _lock?.Dispose();
+            }
+            catch
+            {
+            }
+        }
 
         #endregion
     }

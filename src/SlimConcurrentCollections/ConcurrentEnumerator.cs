@@ -7,13 +7,12 @@ namespace SlimConcurrentCollections
     internal class ConcurrentEnumerator<T> : IEnumerator<T>
     {
         private readonly IEnumerator<T> _inner;
-        private readonly ReaderWriterLockSlim _lock;
+        private readonly ReaderWriterLockSlim _enteredReadLock;
 
-        public ConcurrentEnumerator(IEnumerator<T> inner, ReaderWriterLockSlim @lock)
+        public ConcurrentEnumerator(IEnumerator<T> inner, ReaderWriterLockSlim enteredReadLock)
         {
             _inner = inner;
-            _lock = @lock;
-            _lock.EnterUpgradeableReadLock();
+            _enteredReadLock = enteredReadLock;
         }
 
         public bool MoveNext()
@@ -32,7 +31,7 @@ namespace SlimConcurrentCollections
 
         public void Dispose()
         {
-            _lock.ExitUpgradeableReadLock();
+            _enteredReadLock.ExitReadLock();
         }
     }
 }
