@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -121,7 +119,5 @@ namespace SlimConcurrentCollections.Tests
         }
 
         #endregion
-
-
     }
 }

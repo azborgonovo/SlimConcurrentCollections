@@ -13,9 +13,9 @@ namespace SlimConcurrentCollections.Tests
         }
 
         [Fact]
-        public void ConcurrentCollection_ShouldBeFaster()
+        public void ConcurrentCollection_Should()
         {
-
+            // TODO: to be implemented
         }
     }
 }
