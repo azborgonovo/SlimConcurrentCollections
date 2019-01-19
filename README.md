@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/jxt45i2v4xnyw881?svg=true)](https://ci.appveyor.com/project/AndreBorgonovo/slimconcurrentcollections)
+
 # SlimConcurrentCollections
 Provides thread-safe collection classes that implement the (missing) System.Collections.Generic interfaces.
 
