@@ -4,17 +4,15 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <Authors>Andre Borgonovo</Authors>
     <RepositoryUrl>https://github.com/azborgonovo/SlimConcurrentCollections</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/azborgonovo/SlimConcurrentCollections/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>Provides thread-safe collection classes that implement the (missing) System.Collections.Generic interfaces.
 
 Available Types:
-
-SlimConcurrentCollections.ConcurrentCollection&lt;T&gt;
-
-SlimConcurrentCollections.ConcurrentList&lt;T&gt;</Description>
+ConcurrentCollection&lt;T&gt;
+ConcurrentList&lt;T&gt;</Description>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <Version>1.0.0-alpha1</Version>
   </PropertyGroup>
@@ -25,7 +23,7 @@ SlimConcurrentCollections.ConcurrentList&lt;T&gt;</Description>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\SlimConcurrentCollections.xml</DocumentationFile>
-    <DocumentationMarkdown>..\..\doc\Readme.md</DocumentationMarkdown>
+    <DocumentationMarkdown>..\..\doc\README.md</DocumentationMarkdown>
   </PropertyGroup>
 
   <ItemGroup>
