@@ -23,13 +23,7 @@ namespace SlimConcurrentCollections
         /// <returns>
         /// An <see cref="IEnumerator{T}"/> for the <see cref="ConcurrentList{T}"/>.
         /// </returns>
-        /// <exception cref="LockRecursionException">
-        /// The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// </exception>
+        /// <exception cref="LockRecursionException">The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it.</exception>
         public IEnumerator<T> GetEnumerator()
         {
             var listSnapshot = new List<T>();
@@ -55,13 +49,7 @@ namespace SlimConcurrentCollections
         /// An System.Collections.IEnumerator object that can be used to iterate through
         /// the collection.
         /// </returns>
-        /// <exception cref="LockRecursionException">
-        /// The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// </exception>
+        /// <exception cref="LockRecursionException">The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it.</exception>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
@@ -130,13 +118,7 @@ namespace SlimConcurrentCollections
         /// true if item is found in the <see cref="ConcurrentList{T}"/>; otherwise,
         /// false.
         /// </returns>
-        /// <exception cref="LockRecursionException">
-        /// The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// </exception>
+        /// <exception cref="LockRecursionException">The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it.</exception>
         public bool Contains(T item)
         {
             try
@@ -160,24 +142,10 @@ namespace SlimConcurrentCollections
         /// zero-based indexing.
         /// </param>
         /// <param name="arrayIndex"></param>
-        /// <exception cref="ArgumentNullException">
-        /// array is null.
-        /// </exception>
-        /// <exception cref="ArgumentOutOfRangeException">
-        /// index is less than zero.
-        /// </exception>
-        /// <exception cref="ArgumentException">
-        /// The number of elements in the source <see cref="ConcurrentList{T}"/>
-        /// is greater than the available space from index to the end of the destination
-        /// array.
-        /// </exception>
-        /// <exception cref="LockRecursionException">
-        /// The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// </exception>
+        /// <exception cref="ArgumentNullException">array is null.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">index is less than zero.</exception>
+        /// <exception cref="ArgumentException">The number of elements in the source <see cref="ConcurrentList{T}"/> is greater than the available space from index to the end of the destination array.</exception>
+        /// <exception cref="LockRecursionException">The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it.</exception>
         public void CopyTo(T[] array, int arrayIndex)
         {
             try
@@ -228,13 +196,7 @@ namespace SlimConcurrentCollections
         /// <returns>
         /// The number of elements actually contained in the <see cref="ConcurrentList{T}"/>.
         /// </returns>
-        /// <exception cref="LockRecursionException">
-        /// The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// </exception>
+        /// <exception cref="LockRecursionException">The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it.</exception>
         public int Count
         {
             get
@@ -270,22 +232,8 @@ namespace SlimConcurrentCollections
         /// </summary>
         /// <param name="index">The zero-based index of the element to get or set.</param>
         /// <returns>The element at the specified index.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">
-        /// index is less than zero.-or-index is equal to or greater than <see cref="ConcurrentList{T}.Count"/>.
-        /// </exception>
-        /// <exception cref="LockRecursionException">
-        /// When using the getter, the <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// When using the setter, the <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered the lock in any mode. -or-The current
-        /// thread has entered read mode, so trying to enter the lock in write mode would
-        /// create the possibility of a deadlock. -or-The recursion number would exceed the
-        /// capacity of the counter. The limit is so large that applications should never
-        /// encounter it.
-        /// </exception>
+        /// <exception cref="ArgumentOutOfRangeException">index is less than zero.-or-index is equal to or greater than <see cref="ConcurrentList{T}.Count"/>.</exception>
+        /// <exception cref="LockRecursionException">When using the getter, the <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. When using the setter, the <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered the lock in any mode. -or-The current thread has entered read mode, so trying to enter the lock in write mode would create the possibility of a deadlock. -or-The recursion number would exceed the capacity of the counter. The limit is so large that applications should never encounter it.</exception>
         public T this[int index]
         {
             get
@@ -326,13 +274,7 @@ namespace SlimConcurrentCollections
         /// The zero-based index of the first occurrence of item within the entire <see cref="ConcurrentList{T}"/>,
         /// if found; otherwise, -1.
         /// </returns>
-        /// <exception cref="LockRecursionException">
-        /// The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/>
-        /// and the current thread has already entered read mode. -or-The current thread
-        /// may not acquire the read lock when it already holds the write lock. -or-The recursion
-        /// number would exceed the capacity of the counter. This limit is so large that
-        /// applications should never encounter it.
-        /// </exception>
+        /// <exception cref="LockRecursionException">The <see cref="ReaderWriterLockSlim.RecursionPolicy"/> property is <see cref="LockRecursionPolicy.NoRecursion"/> and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it.</exception>
         public int IndexOf(T item)
         {
             try

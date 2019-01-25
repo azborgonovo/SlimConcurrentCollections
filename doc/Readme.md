@@ -66,11 +66,7 @@ The number of elements actually contained in the [ConcurrentCollection\`1](#T-Sl
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='P-SlimConcurrentCollections-ConcurrentCollection`1-IsReadOnly'></a>
 ### IsReadOnly `property`
@@ -107,17 +103,7 @@ The element at the specified index.
 | Name | Description |
 | ---- | ----------- |
 | [System.ArgumentOutOfRangeException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException') | index is less than zero.-or-index is equal to or greater than [Count](#P-SlimConcurrentCollections-ConcurrentCollection`1-Count 'SlimConcurrentCollections.ConcurrentCollection`1.Count'). |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | When using the getter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it.
-When using the setter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered the lock in any mode. -or-The current
-thread has entered read mode, so trying to enter the lock in write mode would
-create the possibility of a deadlock. -or-The recursion number would exceed the
-capacity of the counter. The limit is so large that applications should never
-encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | When using the getter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. When using the setter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered the lock in any mode. -or-The current thread has entered read mode, so trying to enter the lock in write mode would create the possibility of a deadlock. -or-The recursion number would exceed the capacity of the counter. The limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentCollection`1-Add-`0-'></a>
 ### Add(item) `method`
@@ -130,8 +116,7 @@ Adds an object to the end of the [ConcurrentCollection\`1](#T-SlimConcurrentColl
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| item | [\`0](#T-`0 '`0') | The object to be added to the end of the [ConcurrentCollection\`1](#T-SlimConcurrentCollections-ConcurrentCollection`1 'SlimConcurrentCollections.ConcurrentCollection`1').
-The value can be null for reference types. |
+| item | [\`0](#T-`0 '`0') | The object to be added to the end of the [ConcurrentCollection\`1](#T-SlimConcurrentCollections-ConcurrentCollection`1 'SlimConcurrentCollections.ConcurrentCollection`1'). The value can be null for reference types. |
 
 ##### Exceptions
 
@@ -189,11 +174,7 @@ value can be null for reference types. |
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentCollection`1-CopyTo-`0[],System-Int32-'></a>
 ### CopyTo(array,arrayIndex) `method`
@@ -218,14 +199,8 @@ zero-based indexing. |
 | ---- | ----------- |
 | [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | array is null. |
 | [System.ArgumentOutOfRangeException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException') | index is less than zero. |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | The number of elements in the source [ConcurrentCollection\`1](#T-SlimConcurrentCollections-ConcurrentCollection`1 'SlimConcurrentCollections.ConcurrentCollection`1')
-is greater than the available space from index to the end of the destination
-array. |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | The number of elements in the source [ConcurrentCollection\`1](#T-SlimConcurrentCollections-ConcurrentCollection`1 'SlimConcurrentCollections.ConcurrentCollection`1')is greater than the available space from index to the end of the destination array. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentCollection`1-Dispose'></a>
 ### Dispose() `method`
@@ -257,11 +232,7 @@ This method has no parameters.
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentCollection`1-IndexOf-`0-'></a>
 ### IndexOf(item) `method`
@@ -287,11 +258,7 @@ The value can be null for reference types. |
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentCollection`1-Insert-System-Int32,`0-'></a>
 ### Insert(index,item) `method`
@@ -394,11 +361,7 @@ This method has no parameters.
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='T-SlimConcurrentCollections-ConcurrentList`1'></a>
 ## ConcurrentList\`1 `type`
@@ -436,11 +399,7 @@ The number of elements actually contained in the [ConcurrentList\`1](#T-SlimConc
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='P-SlimConcurrentCollections-ConcurrentList`1-IsReadOnly'></a>
 ### IsReadOnly `property`
@@ -477,17 +436,7 @@ The element at the specified index.
 | Name | Description |
 | ---- | ----------- |
 | [System.ArgumentOutOfRangeException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException') | index is less than zero.-or-index is equal to or greater than [Count](#P-SlimConcurrentCollections-ConcurrentList`1-Count 'SlimConcurrentCollections.ConcurrentList`1.Count'). |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | When using the getter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it.
-When using the setter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered the lock in any mode. -or-The current
-thread has entered read mode, so trying to enter the lock in write mode would
-create the possibility of a deadlock. -or-The recursion number would exceed the
-capacity of the counter. The limit is so large that applications should never
-encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | When using the getter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. When using the setter, the [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered the lock in any mode. -or-The current thread has entered read mode, so trying to enter the lock in write mode would create the possibility of a deadlock. -or-The recursion number would exceed the capacity of the counter. The limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentList`1-Add-`0-'></a>
 ### Add(item) `method`
@@ -559,11 +508,7 @@ value can be null for reference types. |
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentList`1-CopyTo-`0[],System-Int32-'></a>
 ### CopyTo(array,arrayIndex) `method`
@@ -588,14 +533,8 @@ zero-based indexing. |
 | ---- | ----------- |
 | [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | array is null. |
 | [System.ArgumentOutOfRangeException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException') | index is less than zero. |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | The number of elements in the source [ConcurrentList\`1](#T-SlimConcurrentCollections-ConcurrentList`1 'SlimConcurrentCollections.ConcurrentList`1')
-is greater than the available space from index to the end of the destination
-array. |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | The number of elements in the source [ConcurrentList\`1](#T-SlimConcurrentCollections-ConcurrentList`1 'SlimConcurrentCollections.ConcurrentList`1')is greater than the available space from index to the end of the destination array. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentList`1-Dispose'></a>
 ### Dispose() `method`
@@ -627,11 +566,7 @@ This method has no parameters.
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentList`1-IndexOf-`0-'></a>
 ### IndexOf(item) `method`
@@ -657,11 +592,7 @@ The value can be null for reference types. |
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
 
 <a name='M-SlimConcurrentCollections-ConcurrentList`1-Insert-System-Int32,`0-'></a>
 ### Insert(index,item) `method`
@@ -764,8 +695,4 @@ This method has no parameters.
 
 | Name | Description |
 | ---- | ----------- |
-| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')
-and the current thread has already entered read mode. -or-The current thread
-may not acquire the read lock when it already holds the write lock. -or-The recursion
-number would exceed the capacity of the counter. This limit is so large that
-applications should never encounter it. |
+| [System.Threading.LockRecursionException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionException 'System.Threading.LockRecursionException') | The [RecursionPolicy](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.ReaderWriterLockSlim.RecursionPolicy 'System.Threading.ReaderWriterLockSlim.RecursionPolicy')property is [NoRecursion](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.LockRecursionPolicy.NoRecursion 'System.Threading.LockRecursionPolicy.NoRecursion')and the current thread has already entered read mode. -or-The current thread may not acquire the read lock when it already holds the write lock. -or-The recursion number would exceed the capacity of the counter. This limit is so large that applications should never encounter it. |
